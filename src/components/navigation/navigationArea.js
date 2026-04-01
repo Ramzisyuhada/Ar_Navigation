@@ -1,4 +1,4 @@
-import { MeshStandardMaterial, Vector3, PlaneGeometry, TextureLoader, MeshBasicMaterial, Mesh, MathUtils, Group, BoxGeometry } from "three";
+import { BoxGeometry, Group, MathUtils, Mesh, MeshBasicMaterial, MeshStandardMaterial, PlaneGeometry, TextureLoader, Vector3 } from "three";
 import CasualFlapMapImageUrl from "/CasualFlatMap.png";
 
 function setupNavigationAreaGeometry() {
@@ -26,7 +26,7 @@ function setupNavigationAreaGeometry() {
     const floorPlaneMesh = new Mesh(floorGeometry, floorMaterial);
     floorPlaneMesh.rotateX(MathUtils.degToRad(270));
     floorPlaneMesh.renderOrder = 3;
-    // floorPlaneMesh.visible = false;
+    floorPlaneMesh.visible = false;
     navigationArea.add(floorPlaneMesh);
 
     // navigation area parent for easier placement
@@ -46,3 +46,4 @@ function createWallElement(position, rotation, scale, occluderMaterial) {
 }
 
 export { setupNavigationAreaGeometry };
+

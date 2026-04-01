@@ -1,5 +1,6 @@
 body {
     /* remove margins and scroll bars */
+    background-color: black;
     margin: 0;
     overflow: hidden;
 }
